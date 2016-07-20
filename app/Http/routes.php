@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
+
+Route::get('dashboard', function(){
+  return "Welcome to your dashboard ".Auth::user()->name;
+})->middleware('auth');
