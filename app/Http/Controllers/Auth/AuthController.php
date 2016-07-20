@@ -15,6 +15,6 @@ class AuthController extends Controller
 
   public function handleProviderCallback()
   {
-
+    return "you've been logged in using github";
   }
 }
