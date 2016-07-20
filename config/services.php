@@ -40,10 +40,16 @@ return [
     ],
 
     'github' => [
+        'client_id' => '6d54143d2faf96900170'
+        'client_secret' => '7c58281f2fe2b30fa284e2fadf5320ad91b39ab5'
+        'redirect' => 'http://gcr2.grgo.dk/auth/github/callback'
+    ],
+/*
+    'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
         'redirect' => env('GITHUB_REDIRECT'),
     ],
-
+*/
 
 ];
