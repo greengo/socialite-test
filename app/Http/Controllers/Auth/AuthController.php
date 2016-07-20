@@ -10,7 +10,7 @@ class AuthController extends Controller
 {
   public function redirectToProvider()
   {
-    echo "now we should redirect to github";
+    //echo "now we should redirect to github";
     Socialite::driver('github')->redirect();
   }
 
