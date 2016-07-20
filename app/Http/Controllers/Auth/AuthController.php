@@ -16,6 +16,10 @@ class AuthController extends Controller
 
   public function handleProviderCallback()
   {
+
+    echo "now you're supposed to be logged in";
+
+
     $user = Socialite::driver('github')->user();
 
 
