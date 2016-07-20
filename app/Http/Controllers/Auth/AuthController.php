@@ -15,6 +15,26 @@ class AuthController extends Controller
 
   public function handleProviderCallback()
   {
-    return "you've been logged in using github";
+    $user = Socialite::driver('github')->user();
+
+
+    // OAuth Two Providers
+    $token = $user->token;
+    $refreshToken = $user->refreshToken; // not always provided
+    $expiresIn = $user->expiresIn;
+
+    // OAuth One Providers
+    $token = $user->token;
+    $tokenSecret = $user->tokenSecret;
+
+    // All Providers
+    $user->getId();
+    $user->getNickname();
+    $user->getName();
+    $user->getEmail();
+    $user->getAvatar();
+
+
+    return redirect('dashboard');
   }
 }
